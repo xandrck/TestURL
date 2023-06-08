@@ -1,0 +1,11 @@
+<turbo-stream action="append" target="errors">
+  <template>
+    <div class="error-message">
+      <ul>
+        <% object.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </template>
+</turbo-stream>

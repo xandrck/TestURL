@@ -1,0 +1,11 @@
+<div id="errors">
+  <%= render 'shared/error_messages', object: @url %>
+</div>
+
+<%= form_for :url, method: :post do |f| %>
+  <%= f.label 'Enter your URL here:' %>
+  <%= f.text_field :full_path %>
+  <%= f.submit %>
+<% end %>
+
+<%= render 'urls/list' if @urls %>

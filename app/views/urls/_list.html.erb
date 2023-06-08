@@ -1,0 +1,5 @@
+<% @urls.each do |url| %>
+  <div>
+    <%= link_to url.token, show_url_path(url.token) %>
+  </div>
+<% end %>

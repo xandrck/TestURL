@@ -1,0 +1,16 @@
+<div>
+  <strong>Url:</strong> <%= link_to @url.full_path, @url.full_path %>
+</div>
+
+<div>
+  <strong>Token:</strong> <%= link_to @url.token, show_url_path(@url.token) %>
+</div>
+
+<div>
+  <strong>List of IPs:</strong>
+  <ul>
+    <% @url.url_logs.each do |log| %>
+      <li><%= log.ip %></li>
+    <% end %>
+  </ul>
+</div>
